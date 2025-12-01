@@ -82,8 +82,16 @@
     <div class="LearnMore">
         <button class="learn-btn">Learn More →</button>
     </div>
-    <script>
 
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+//Navbar Link
+document.querySelector(".p1").addEventListener("click", () => {
+    window.location.href = "home.html";
+});
 
 
 //Add hover animation for all course boxes (zoom function)
@@ -99,7 +107,6 @@ courseBoxes.forEach(box => {
         box.style.transform = "scale(1)";
     });
 });
-
 
 </script>
 
