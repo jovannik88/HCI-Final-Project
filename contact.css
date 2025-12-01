@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(236, 226, 215);
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position:relative;
+
+}
+.Header h1{
+    color:rgb(94, 88, 80);
+    margin-right: auto;
+}
+.Menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px; 
+    font-weight: 500;
+    color:rgb(94, 88, 80);
+    font-size: 28px;
+    font-family:"Montserrat",sans-serif;   
+    padding: 8px 18px;
+    
+}
+.p1, .p2, .p3, .p4 {
+    padding: 5px 12px;   
+    border-radius: 15px; 
+}
+.p1:hover,.p2:hover,.p3:hover,.p4:hover {
+    background-color: rgb(183, 170, 174);
+    transition: 0.25s ease-in-out;
+    padding: 8px 18px; 
+    border-radius: 15px;  
+    cursor:pointer;
+}
+
+.contact{
+    width: 400px;
+    margin: 80px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
