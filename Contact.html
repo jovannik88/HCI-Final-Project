@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="Header">
+        <h1>Fluent Nusantara</h1>
+        <div class="Menu">
+            <p class="p1">Home</p>
+            <p class="p2">About</p>
+            <p class="p3">Course</p>
+            <p class="p4">Contact</p>
+        </div>   
+    </div>
+
+<div class="contact">
+    <h2>Contact Us</h2>
+    <form action="Course Page.html">  <!-- Go back to home page -->
+        <label for="name">Name :</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<!-- Script -->
+<script>
+document.querySelector(".p3").addEventListener("click", () => {
+    window.location.href = "Course Page.html";
+});
+document.querySelector(".p4").addEventListener("click", () => {
+    window.location.href = "Contact.html";
+});
+
+</script>
+</body>
+</html>

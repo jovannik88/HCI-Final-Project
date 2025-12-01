@@ -80,7 +80,40 @@
         </div>
     </div>
     <div class="LearnMore">
-    <button class="learn-btn">Learn More →</button>
+        <button class="learn-btn">Learn More →</button>
     </div>
+
+
+    <!-- JAVASCRIPT -->
+
+<script>
+
+//Navbar Link
+
+document.querySelector(".p3").addEventListener("click", () => {
+    window.location.href = "Course Page.html";
+});
+document.querySelector(".p4").addEventListener("click", () => {
+    window.location.href = "Contact.html";
+});
+
+
+
+//Add hover animation for all course boxes (zoom function)
+const courseBoxes = document.querySelectorAll(".Course > div");
+
+courseBoxes.forEach(box => {
+    box.addEventListener("mouseenter", () => {
+        box.style.transform = "scale(1.05)";
+        box.style.transition = "0.3s";
+    });
+
+    box.addEventListener("mouseleave", () => {
+        box.style.transform = "scale(1)";
+    });
+});
+
+</script>
+
 </body>
 </html>
