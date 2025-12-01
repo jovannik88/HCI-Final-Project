@@ -9,11 +9,11 @@ body {
 
     border: 2px;
 
-    border-color:#eae2d8;
-    background-color: #eae2d8;
+    border-color:rgb(236, 226, 215);
+    background-color: rgb(236, 226, 215);
     color: #5c594f;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 28px;
 
     display: flex;
     align-items: center;

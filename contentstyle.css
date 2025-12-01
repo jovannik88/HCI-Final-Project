@@ -1,9 +1,9 @@
 body {
-    background-color: ivory;
+    background-color: rgb(236, 226, 215);
 }
 
 .header{
-    color:black;
+    color:rgb(94, 88, 80);
     font-family:'Trebuchet MS';
     text-align: center;
     font-size:40px;
