@@ -12,7 +12,7 @@
             Fluent Nusantara
         </div>
         <div id="title">
-            Beginner
+            Elementary
         </div>
     </header>
 
@@ -21,18 +21,18 @@
     <main id="QA">
         <section class="question">
             <p class = "num"></p>
-            <p>Bob is an absolute ...</p>
+            <p>Bob</p>
             <button class="choice_0">
-                Great guy
+                Is Bob
             </button>
             <button class="choice_1">
-                Stud
+                Is not Bob
             </button>
             <button class="choice_2">
-                Careful guy
+                Maybe Bob
             </button>
             <button class="choice_3">
-                Madman
+                Bobbert
             </button>
         </section>
 
@@ -55,7 +55,7 @@
 
         <section class="question">
             <p class = "num"></p>
-            <p>Bruce </p>
+            <p>Bruce</p>
             <button class="choice_0">
                 Is not Billy
             </button>
@@ -127,7 +127,7 @@
         const questions = document.querySelectorAll(".question")
 
         // Store all the correct answers (0, 1, 2, or 3)
-        const answers = [1, 1, 0, 0, 3]
+        const answers = [0, 1, 0, 0, 3]
 
         // Store all the picked answers
         let chosen_answer = new Array(questions.length).fill(null)
@@ -208,7 +208,7 @@
             window.location.replace("Course Page.html")
         }
 
-        // Figures out when to allow next or when to subgmit, also allow you to move forward
+        // Figures out when to allow next or when to submit, also allow you to move forward
         document.getElementById("next").onclick = function(){
             if (current_number < questions.length - 1){
                 current_number ++
