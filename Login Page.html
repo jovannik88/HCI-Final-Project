@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Login">
+    <h2>Login</h2>
+            <form onsubmit="login(); return false;">
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Send</button>
+        </form>
+</div> 
+<script>
+    function login() {
+    // Login emails
+    const correctEmail = "jovannik88@gmail.com";
+    const correctPassword = "12345";
+
+    // Get input values from label email and password
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // script to check if the login credential is correct
+    if (email === correctEmail && password === correctPassword) {
+        alert("Login successful!");
+        
+        window.location.href = "Course Page.html";
+    } else {
+        alert("Incorrect email or password");
+    }
+}
+</script>
+</body>
+</html>
