@@ -26,7 +26,7 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input{
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -48,4 +48,70 @@ button {
 
 button:hover {
     background: #2980b9;
+}
+
+/* 1024px – Laptops, iPad landscape */
+@media (max-width: 1024px) {
+    .Login {
+        width: 450px;   /* slightly larger */
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 17px;
+    }
+}
+
+/* 768px – Tablets */
+@media (max-width: 768px) {
+    .Login {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* 480px – Mobile */
+@media (max-width: 480px) {
+    .Login {
+        width: 90%;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
