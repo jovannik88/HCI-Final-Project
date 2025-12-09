@@ -50,10 +50,10 @@ button:hover {
     background: #2980b9;
 }
 
-/* 1024px – Laptops, iPad landscape */
+
 @media (max-width: 1024px) {
     .Login {
-        width: 450px;   /* slightly larger */
+        width: 450px;   
         padding: 30px;
     }
 
@@ -72,7 +72,6 @@ button:hover {
     }
 }
 
-/* 768px – Tablets */
 @media (max-width: 768px) {
     .Login {
         width: 80%;
@@ -89,7 +88,7 @@ button:hover {
     }
 }
 
-/* 480px – Mobile */
+
 @media (max-width: 480px) {
     .Login {
         width: 90%;

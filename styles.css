@@ -152,7 +152,7 @@ body{
     transform: translateX(4px);
 }
 
-/* Large Tablets & Small Laptops (≤ 1024px) */
+
 @media (max-width: 1024px) {
     .Menu {
         position: static;
@@ -172,7 +172,6 @@ body{
     }
 }
 
-/* Tablets (≤ 768px) */
 @media (max-width: 768px) {
     .Header {
         flex-direction: column;
@@ -193,8 +192,7 @@ body{
     }
 
     .Course {
-        grid-template-columns: 1fr; /* 1 box per row */
-        width: 95%;
+        grid-template-columns: 1fr;
     }
 
     .Beginner, .Elementary, .Prein, .Inter, .Uperinter, .Advanced {
@@ -206,7 +204,7 @@ body{
     }
 }
 
-/* Phones (≤ 480px) */
+
 @media (max-width: 480px) {
     body {
         padding: 0;

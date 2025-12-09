@@ -103,7 +103,7 @@ button:hover {
     }
 }
 
-/* --- 768px (Tablet Portrait) --- */
+
 @media (max-width: 768px) {
 
     .Menu {
@@ -131,7 +131,7 @@ button:hover {
     }
 }
 
-/* --- 480px (Mobile) --- */
+
 @media (max-width: 480px) {
 
     .Header h1 {
