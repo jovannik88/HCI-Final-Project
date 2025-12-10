@@ -14,7 +14,20 @@
         <div id="title">
             Title Very Long Long
         </div>
+        <div id="darkmode">
+            <button id="moon">
+                <img src="assets/moon.png" alt="moon" class="moon">
+            </button>
+        </div>
+
     </header>
+
+    <div id="breadcrumbs">
+        <p>Dashboard > Title ></p>
+    </div>
+    <div id="breadcrumbs2">
+        <p>Quiz</p>
+    </div>
 
     <main id="QA">
         <section class="question">
@@ -53,6 +66,7 @@
 
     <div id="lineofprogress">
         <div id="progress"></div>
+        <div id="current"></div>
     </div>
 
     <nav id="controls">
@@ -87,11 +101,19 @@
         <div id="score_box_text2">
             Your score is:
         </div>
-        <div id="score"></div>
-        <div id="score_message"></div>
+        <div id="score">
+            <!-- JS will fill this one -->
+        </div>
+        <div id="score_message">
+            <!-- JS will fill this one -->
+        </div>
         <button id="score_return_to_dashboard">
             Return to Dashboard
         </button>
+    </div>
+
+    <div id="question_answered">
+        <p>Answer Accepted</p>
     </div>
 
     <script>
@@ -100,15 +122,34 @@
 
         let chosen_answer = new Array(questions.length).fill(null)
         let current_number = 0
+        let darkmode = false
 
         function progress_bar(){
             progress = (100 / (questions.length)) * (current_number)
             document.getElementById("progress").style.width = progress + "%"
+
+            current_len = (100 / (questions.length))
+            document.getElementById("current").style.width = current_len + "%"
+
+            current_pos = current_len * current_number
+            document.getElementById("current").style.left = current_pos + "%"
         }
+
 
         function whatNumberAmI(current_number){
             for (let i = 0; i < questions.length; i++){
-                questions[i].style.display = "none";
+                questions[i].style.display = "none"
+                currentq = questions[current_number];
+                if (darkmode == true){
+                    currentq.style.borderColor = "#37464f";
+                    currentq.style.backgroundColor = "#131e21";
+                    currentq.style.color = "white";
+                }
+                else{
+                    currentq.style.borderColor = "lightgray";
+                    currentq.style.backgroundColor = "white";
+                    currentq.style.color = "black";
+                }
             }
             questions[current_number].style.display = "block"
             questions[current_number].querySelector(".num").textContent = (current_number + 1) + "."
@@ -133,13 +174,24 @@
                 document.getElementById("next").textContent = "Next"
             }
 
+            currentq = questions[current_number];
+            if (darkmode == true){
+                currentq.style.borderColor = "#37464f";
+                currentq.style.backgroundColor = "#131e21";
+                currentq.style.color = "white";
+            }
+            else{
+                currentq.style.borderColor = "lightgray";
+                currentq.style.backgroundColor = "white";
+                currentq.style.color = "black";
+            }
+
             progress_bar()
         }
 
         function whatDidIChoose(option, choice){
             option.onclick = function(){
                 chosen_answer[current_number] = choice
-
                 const options = questions[current_number].querySelectorAll("button")
                 for (let i = 0; i < options.length; i++){
                     options[i].classList.remove("selected")
@@ -155,31 +207,30 @@
             })
         }
 
-        abilityToChoose("choice_0", 0);
-        abilityToChoose("choice_1", 1);
-        abilityToChoose("choice_2", 2);
-        abilityToChoose("choice_3", 3);
+        abilityToChoose("choice_0", 0)
+        abilityToChoose("choice_1", 1)
+        abilityToChoose("choice_2", 2)
+        abilityToChoose("choice_3", 3)
         
         function submit_confirmation(){
-            document.getElementById("score_box_overlay").style.opacity = "1";
-            document.getElementById("score_box_overlay").style.pointerEvents = "auto";
-
-            document.getElementById("submit_confirmation").style.top = "300px";
+            document.getElementById("score_box_overlay").style.opacity = "1"
+            document.getElementById("score_box_overlay").style.pointerEvents = "auto"
+            document.getElementById("submit_confirmation").style.top = "300px"
 
             document.getElementById("submit_confirmation_yes").onclick = function(){
-                document.getElementById("submit_confirmation").style.opacity = "0";
+                document.getElementById("submit_confirmation").style.opacity = "0"
                 submit()
             }
 
             document.getElementById("submit_confirmation_no").onclick = function(){
-                document.getElementById("score_box_overlay").style.opacity = "0";
-                document.getElementById("score_box_overlay").style.pointerEvents = "none";
-                document.getElementById("submit_confirmation").style.top = "-500px";
+                document.getElementById("score_box_overlay").style.opacity = "0"
+                document.getElementById("score_box_overlay").style.pointerEvents = "none"
+                document.getElementById("submit_confirmation").style.top = "-500px"
             }
         }
 
         function submit(){
-            let score = 0
+            score = 0
             for (let i = 0; i < questions.length; i++){
                 if (chosen_answer[i] == correct_answers[i]){
                     score ++
@@ -206,9 +257,55 @@
             }
         }
 
+        function twosectimer(){
+            document.getElementById("question_answered").style.right = "-500px"
+        }
+
+        document.getElementById("moon").onclick = function(){
+            if (darkmode == false){
+                document.getElementById("moon").style.right = "-3px"
+                document.getElementById("darkmode").style.backgroundColor = "black"
+
+                document.body.style.backgroundColor = "#131e21"
+
+                document.getElementById("topbar").style.backgroundColor = "#202f36"
+                document.getElementById("topbar").style.color = "white"
+
+                document.getElementById("breadcrumbs2").style.color = "white"
+
+                document.querySelector("#QA .question").style.borderColor = "#37464f"
+                document.querySelector("#QA .question").style.backgroundColor = "#131e21"
+                document.querySelector("#QA .question").style.color = "white"
+
+                darkmode = true
+            }
+            else{
+                document.getElementById("moon").style.right = "34px"
+                document.getElementById("darkmode").style.backgroundColor = "white"
+
+                document.body.style.backgroundColor = "white"
+
+                document.getElementById("topbar").style.backgroundColor = "#eae2d8"
+                document.getElementById("topbar").style.color = "#5c594f"
+
+                document.getElementById("breadcrumbs2").style.color = "black"
+
+                document.querySelector("#QA .question").style.borderColor = "lightgray"
+                document.querySelector("#QA .question").style.backgroundColor = "white"
+                document.querySelector("#QA .question").style.color = "black"
+
+                darkmode = false
+            }
+            whatNumberAmI(current_number)
+        }
+
         document.getElementById("next").onclick = function(){
             if (current_number < questions.length - 1 && have_answered != false){
                 current_number ++
+
+                document.getElementById("question_answered").style.right = "10%"
+                setTimeout(twosectimer, 1569)
+
                 whatNumberAmI(current_number)
             }
             else if (have_answered != false){
