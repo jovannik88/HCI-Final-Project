@@ -26,7 +26,7 @@ body{
     padding: 8px 18px;
     
 }
-.p1, .p2, .p3, .p4 {
+.p2, .p3, .p4 {
     padding: 5px 12px;   
     border-radius: 15px; 
 }
@@ -34,7 +34,7 @@ body{
 .p3{
     background-color: rgb(183, 170, 174);
 }
-.p1:hover,.p2:hover,.p3:hover,.p4:hover {
+.p2:hover,.p3:hover,.p4:hover {
     background-color: rgb(183, 170, 174);
     transition: 0.25s ease-in-out;
     padding: 8px 18px; 
