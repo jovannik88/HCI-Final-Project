@@ -4,6 +4,29 @@ body {
     background-color: #fff9f1;
 }
 
+#ErrorMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40vh auto 0 0;
+
+    text-align: center;
+    font-size: 50px;
+}
+
+#ReturnDash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 8vh auto;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+}
+
 #topbar {
     display: flex;
     align-items: center;
@@ -32,7 +55,7 @@ body {
     border-radius: 16px;
     border: 3px solid black;
 
-    transition:  background-color 1s ease;
+    transition: background-color 1s ease;
 }
 
 #moon{
