@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="questions.css"/>
+</head>
+<body>
+    <header id="topbar">
+        <div id="branding">
+            Fluent Nusantara
+        </div>
+        <div id="title">
+            Beginner
+        </div>
+        <div id="darkmode">
+            <button id="moon">
+                <img src="assets/moon.png" alt="moon" class="moon">
+            </button>
+        </div>
+    </header>
+
+    <div id="breadcrumbs">
+        <p>Dashboard > Title ></p>
+    </div>
+    <div id="breadcrumbs2">
+        <h1>Quiz</h1>
+    </div>
+
+    <main id="QA">
+        <section class="question">
+            <p class = "num"></p>
+            <p>Frank likes to ... tea</p>
+            <button class="choice_0">
+                Drank
+            </button>
+            <button class="choice_1">
+                Drink
+            </button>
+            <button class="choice_2">
+                Drunk
+            </button>
+            <button class="choice_3">
+                Drinks
+            </button>
+        </section>
+        <section class="question">
+            <p class = "num"></p>
+            <p>Bob likes to ... Salami</p>
+            <button class="choice_0">
+                Eat
+            </button>
+            <button class="choice_1">
+                Ate
+            </button>
+            <button class="choice_2">
+                Feed
+            </button>
+            <button class="choice_3">
+                Eaten
+            </button>
+        </section>
+        <section class="question">
+            <p class = "num"></p>
+            <p>I knew i shouldn't have ... you with the car</p>
+            <button class="choice_0">
+                Trusted
+            </button>
+            <button class="choice_1">
+                Trust
+            </button>
+            <button class="choice_2">
+                Given
+            </button>
+            <button class="choice_3">
+                Borrow
+            </button>
+        </section>
+        <section class="question">
+            <p class = "num"></p>
+            <p>Let it be known that ... fights drunks</p>
+            <button class="choice_0">
+                He likes
+            </button>
+            <button class="choice_1">
+                He often
+            </button>
+            <button class="choice_2">
+                Never
+            </button>
+            <button class="choice_3">
+                Loves
+            </button>
+        </section>
+        <section class="question">
+            <p class = "num"></p>
+            <p>I have never seen ... things before</p>
+            <button class="choice_0">
+                Such
+            </button>
+            <button class="choice_1">
+                That
+            </button>
+            <button class="choice_2">
+                This
+            </button>
+            <button class="choice_3">
+                There
+            </button>
+        </section>
+    </main>
+
+    <div id="lineofprogress">
+        <div id="progress"></div>
+        <div id="current"></div>
+    </div>
+
+    <nav id="controls">
+        <button id="back">
+            Back
+        </button>
+        <button id="next">
+            Next
+        </button>
+    </nav>
+
+    <div id="score_box_overlay"></div>
+
+    <div id="submit_confirmation">
+        <div id="submit_confirmation_text">
+            Are you sure you want to submit?
+        </div>
+        <div id="submit_confirmation_buttons">
+            <button id="submit_confirmation_yes">
+                Confirm
+            </button>
+            <button id="submit_confirmation_no">
+                Not Yet
+            </button>
+        </div>
+    </div>
+
+    <div id="score_box">
+        <div id="score_box_text1">
+            You have completed the quiz!
+        </div>
+        <div id="score_box_text2">
+            Your score is:
+        </div>
+        <div id="score">
+            <!-- JS will fill this one -->
+        </div>
+        <div id="score_message">
+            <!-- JS will fill this one -->
+        </div>
+        <button id="score_return_to_dashboard">
+            Return to Dashboard
+        </button>
+    </div>
+
+    <div id="question_answered">
+        <p>Answer Accepted</p>
+    </div>
+
+    <script src="questions6.js"></script>
+</body>
+</html>
+
